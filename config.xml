@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns 		= "http://www.w3.org/ns/widgets"
  xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "br.com.benjax.qr"
+        id        = "br.com.benjax.dominios"
         version   = "1.0.0">
 	
-	    <name>QR</name>
+	    <name>Gerenciador de domínios</name>
 
     <description>
-        QR locão
+        Gerenciador de domínios
     </description>
 
     <author href="http://benjax.com.br" email="brnjax@benjax.com.br">
