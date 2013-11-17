@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Benjax Mobile Template</title>
+
+    <!-- Sets initial viewport load and disables zooming	-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the base Snap.js CSS -->
+    <link rel="stylesheet" href="css/snap.css">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link rel="stylesheet" href="css/ratchet.css">
+
+    <!-- Include the app CSS -->
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" type="text/css" href="css/transition.min.css" />
+
+    <link href="css/icomoon.css" rel="stylesheet" />
+
+
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/transition.min.js"></script>
+    <script type="text/javascript" src="js/ratchet.js"></script>
+
+
+</head>
+<body>
+    <!-- MENU ESQUERDO -->
+    <div class="snap-drawers">
+        <div class="snap-drawer snap-drawer-left" id="left-drawer">
+            <div id="menu">
+                <div class="scrollable">
+                    <ul>
+                        <li id="li_page_home" class="active">
+                            <span aria-hidden="true" class="icon-home-2"></span>
+                            <a id="home" transition="side" href="#page_home">Inicial</a>
+                        </li>
+                        <li id="li_nova_pagina">
+                            <span aria-hidden="true" class="icon-bookmarks"></span>
+                            <a id="save-location" transition="side" href="#page_nova_pagina">Nova Página</a>
+                        </li>
+                        <li id="li1">
+                            <span aria-hidden="true" class="icon-bookmarks"></span>
+                            <a id="A1" transition="side" href="#page_nova_pagina">QR Code</a>
+                        </li>
+                        <li id="copy">Benjax &copy; 2013
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIM MENU ESQUERDO -->
+
+    <!-- MENU LATERAL DIREITO -->
+    <div class="snap-drawer snap-drawer-right" id="right-drawer">
+        <ul class="list">
+            <li class="list-divider">Relatórios de acesso</li>
+            <li>
+                <div class="fs1" aria-hidden="true" data-icon="&#xf20c;"></div>
+                Página 3
+	            <div class="toggle-box">
+                    <label for="toggle-nearby-distances" class="toggle-label">KM &nbsp;&nbsp; MIL</label>
+                    <input type="checkbox" value="1" id="toggle-nearby-distances" class="toggle-control" />
+                </div>
+            </li>
+            <li class="list-divider">Redes Sociais</li>
+            <li>
+                <div class="fs1" aria-hidden="true" data-icon="&#xf22a;"></div>
+                Página 4 
+	            <div class="toggle-box">
+                    <label for="toggle-traffic-layer" class="toggle-label">ON &nbsp;&nbsp; OFF</label>
+                    <input type="checkbox" value="1" id="toggle-traffic-layer" class="toggle-control" />
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- FIM MENU LATERAL DIREITO -->
+
+    <!-- PRINCIPAL -->
+    <div id="content" class="snap-content">
+        <!-- TOPO -->
+        <header class="bar-title">
+            <button class="button icon-list-2 toggle-left"></button>
+            <select name="htmlcombo">
+                <option name="box1" value="Value1">Selecione um dominio</option>
+                <option name="box2" value="Value2">www.benjax.com.br</option>
+                <option name="box3" value="Value3">www.benjamim.net</option>
+            </select>
+            <!-- 	<button class="button icon-uniF00F toggle-right" value="off"></button> -->
+        </header>
+        <!-- FIM TOPO -->
+
+        <!-- Conteúdo -->
+        <div class="content">
+            <!-- LOADING -->
+            <div class="loading" align="center">
+                <div class="circle"></div>
+                <div class="circle1"></div>
+            </div>
+            <!-- FIM LOADING -->
+
+            <!-- PAGE HOME -->
+            <div id="page_home" data-role="page">
+                <div class="wrapper">
+                   <h1>Página 1</h1>
+                    <br />
+                   <p>Selecione um domínio acima para visualizar relatórios e poder gerenciar seus emails</p> 
+                </div>
+            </div>
+            <!-- END PAGE HOME -->
+
+
+            <!-- PAGE NOVA PAGINA -->
+            <div id="page_nova_pagina" data-role="page" data-title="Page Save Location">
+                <div class="content-padded">
+                    <form>
+                        <input type="text" id="form-title" placeholder="Email">
+                        <input type="text" id="form-title" placeholder="Senha">
+                        <textarea rows="5" id="form-desc" placeholder="Descrição"></textarea>
+                        <a id="form-add" class="button-positive button-block" href="#page_save_location">Adicionar Email</a>
+                    </form>
+                </div>
+            </div>
+            <!-- END PAGE SAVE LOCATION -->
+
+
+        </div>
+        <!-- FIM CONTEÚDO -->
+    </div>
+    <!-- FIM PRINCIPAL -->
+
+    <script type="text/javascript" src="js/snap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
