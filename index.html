@@ -26,6 +26,30 @@
     <script type="text/javascript" src="js/zepto.min.js"></script>
     <script type="text/javascript" src="js/transition.min.js"></script>
     <script type="text/javascript" src="js/ratchet.js"></script>
+   
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+    <!--
+    function getCodes() {
+        var bcnumber = $('#bc_number').val();
+
+        $('#results').html('<img alt="" src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=' + bcnumber + '&choe=UTF-8" />');
+    }
+
+
+
+    $(document).ready(function () {
+        $('#bcform').submit(function (event) {
+            event.preventDefault();
+            getCodes();
+        });
+
+        $('#bc_number').focus();
+    });
+    //-->
+    </script>
+
+
 
 
 </head>
@@ -41,12 +65,12 @@
                             <a id="home" transition="side" href="#page_home">Inicial</a>
                         </li>
                         <li id="li_nova_pagina">
-                            <span aria-hidden="true" class="icon-bookmarks"></span>
+                            <span aria-hidden="true" class="icon-bookmarks" data-icon="&#x58;"></span>
                             <a id="save-location" transition="side" href="#page_nova_pagina">Nova Página</a>
                         </li>
                         <li id="li1">
-                            <span aria-hidden="true" class="icon-bookmarks"></span>
-                            <a id="A1" transition="side" href="#page_nova_pagina">QR Code</a>
+                            <span aria-hidden="true" data-icon="&#x58;"></span>
+                            <a id="A1" transition="side" href="#page_qrcode">QR Code</a>
                         </li>
                         <li id="copy">Benjax &copy; 2013
                         </li>
@@ -127,7 +151,33 @@
                     </form>
                 </div>
             </div>
-            <!-- END PAGE SAVE LOCATION -->
+            <!-- FIM NOVA PAGINA -->
+
+             <!-- PAGE PAGINA QRCODE -->
+            <div id="page_qrcode" data-role="page" data-title="Page Save Location">
+                <div class="content-padded">
+                    <form>
+                        <a id="A2" class="button-positive button-block" href="#page_gerar_qrcode">Gerar QR Code</a>
+                    </form>
+                </div>
+            </div>
+            <!-- FIM QRCODE -->
+
+             <!-- PAGINA GERA QRCODE -->
+            <div id="page_gerar_qrcode" data-role="page" data-title="Page Save Location">
+                <div class="content-padded">
+                    <div id="results">
+                    </div>
+                    <form method="post" id="bcform">
+                         <input type="text" name="bc_number" id="bc_number" placeholder="endereço do site http://www.nomedosite.com.br">
+                        <a id="A3" class="button-positive button-block" onclick="getCodes()">Gerar QR Code</a>
+                    </form>
+                </div>
+            </div>
+            <!-- FIM QRCODE -->
+
+
+            
 
 
         </div>
